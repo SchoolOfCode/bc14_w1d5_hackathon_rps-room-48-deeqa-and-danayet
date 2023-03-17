@@ -1,3 +1,4 @@
+
 let userChoiceR = "rock";
 let userChoiceP = "paper";
 let userChoiceS = "scissor";
@@ -7,32 +8,47 @@ let compChoiceR = "rock";
 let compChoiceS = "scissor";
 let compChoiceP = "paper";
 
+let result1 =  1;
+let resultMinus = 1 ;
+let resultDraw = 0 ;
 
 
 
 
-let userChoice = userChoiceS;
-let compChoice = compChoiceP;
+let userChoice = prompt("please enter your choice user");
+let compChoice = prompt("please enter your choice computer");
+
+
+
+function getResults (userChoice, compChoice) {
+    
 
 
 
 if (userChoice === "rock" && compChoice === "scissor")
 {
-console.log("User won")
+let winner= "human won";
+alert(winner);
+return result1;
+
 }
 
 
  
 else if (userChoice === "rock" && compChoice === "paper"){
     
-    console.log("comp won")
-
+    return resultMinus;
+    
+ 
 
 }
 
+
+    
+
 else if (userChoice === "rock" && compChoice === "rock") 
 {
- console.log("Try again")
+ resultDraw;
 }
 
 
@@ -42,43 +58,42 @@ else if (userChoice === "rock" && compChoice === "rock")
 
 else if (userChoice === "scissor" && compChoice === "scissor")
 {
-console.log("Try again")
+resultDraw;
 }
 
 
  
 else if (userChoice === "scissor" && compChoice === "paper"){
     
-    console.log("User won")
+  return  result1;
 
 
 }
 
 else if (userChoice === "scissor" && compChoice === "rock") 
 {
- console.log("computer won")
+ return resultMinus;
 }
 
 
 else if (userChoice === "paper" && compChoice === "scissor")
 {
-console.log("computer won")
+return resultMinus;
 }
 
 
  
 else if (userChoice === "paper" && compChoice === "paper"){
     
-    console.log("try again")
+    return resultDraw;
 
 }
 
 else if (userChoice === "paper" && compChoice === "rock") 
 {
- console.log("User won")
+ return result1;
 };
 
 
-
-
-
+};
+ getResults(userChoice, compChoice)
